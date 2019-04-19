@@ -1,6 +1,6 @@
-#Library Management System
+Library Management System
 
-#Various features of the management system are:
+Various features of the management system are:
 
 -Login System
 
@@ -21,4 +21,13 @@
 -Fine charging system
 
 
-#Collaborartion
+Collaborartion
+
+-No one can push directly in the master branch except manager.
+
+-All contributors work on separate branch
+
+-All contributors create a pull request to merge their code
+
+-All merging takes place in separate branch.
+
