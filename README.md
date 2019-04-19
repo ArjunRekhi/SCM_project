@@ -25,7 +25,7 @@ Collaborartion
 
 -No one can push directly in the master branch except manager.
 
--All contributors work on separate branch
+-All contributors work on separate branches
 
 -All contributors create a pull request to merge their code
 
