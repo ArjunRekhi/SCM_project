@@ -168,3 +168,40 @@ void Lib::fine(int d,int m,int y,int dd,int mm,int yy)
     cout<<"\n\t\tThe Total Fine is : "<<n2;
     
 }
+
+ void Lib::issue()
+{
+	
+    char st[50],st1[20];
+    int b,i,j,d,m,y,dd,mm,yy,cont=0;
+    system("cls");
+    cout<<"\n\t\t->Please Choose one option :-\n";
+    cout<<"\n\t\t1.Issue Book\n\n\t\t2.View Issued Book\n\n\t\t3.Search student who isuued books\n\n\t\t4.Reissue Book\n\n\t\t5.Return Book\n\n\t\t6.Go back to menu\n\n\t\tEnter Your Choice : ";
+    cin>>i;
+    fflush(stdin);
+    if(i==1)
+    {
+    	
+    system("cls");
+    b=branch(2);
+    system("cls");
+    fflush(stdin);
+    cout<<"\n\t\t->Please Enter Details :-\n";
+    cout<<"\n\t\tEnter Book Name : ";
+    cin.getline(bookname,100);
+    cout<<"\n\t\tEnter Book's ID : ";
+    
+     cin.getline(sc,20);
+    //strcpy(st,sc);
+    der(sc,b,1);
+    cout<<"\n\t\tEnter Student Name : ";
+    cin.getline(auname,100);
+    cout<<"\n\t\tEnter Student's ID : ";
+    cin.getline(sc1,20);
+    cout<<"\n\t\tEnter date : ";
+    cin>>q>>B>>p;
+    ofstream outf("student.txt",ios::binary|ios::app);
+    outf.write((char*)this,sizeof(*this));
+    outf.close();
+    cout<<"\n\n\t\tIssue Successfully.\n";
+    
