@@ -120,4 +120,19 @@ int Lib::branch(int x)
         }
   }~
 ~
-
+void Lib::show(int i)
+{
+	
+    cout<<"\n\t\tBook Name : "<<bookname<<endl;
+    cout<<"\n\t\tBook's Author Name : "<<auname<<endl;
+    cout<<"\n\t\tBook's ID : "<<sc<<endl;
+    cout<<"\n\t\tBook's Publication : "<<sc1<<endl;
+    if(i==2)
+    {
+    	
+        cout<<"\n\t\tBook's Price : "<<p<<endl;
+        cout<<"\n\t\tBook's Quantity : "<<q<<endl;
+        
+    }
+    
+}
