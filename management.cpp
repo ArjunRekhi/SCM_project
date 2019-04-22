@@ -180,4 +180,71 @@ void Lib::modify()
                                     intf.close();
                                     
                             }
+                           else if(i==2)
+                        {
+                        	
+                                cout<<"\n\t\tEnter Book's ID : ";
+                                cin.getline(st1,100);
+                                system("cls");
+                                fstream intf("Booksdata.txt",ios::in|ios::out|ios::ate|ios::binary);
+                                intf.seekg(0);
+                                intf.read((char*)this,sizeof(*this));
+                                while(!intf.eof())
+                                    {
+                                        for(i=0;b==B&&sc[i]!='\0'&&st1[i]!='\0'&&st1[i]==sc[i];i++);
+                                        if(sc[i]=='\0'&&st1[i]=='\0')
+                                            {
+                                            	
+                                                cont++;
+                                                getdata();
+                                                intf.seekp(intf.tellp()-sizeof(*this));
+                                                intf.write((char*)this,sizeof(*this));
+                                                break;
+                                            }
+                                            
+                                        intf.read((char*)this,sizeof(*this));
+                                    }
+
+                                intf.close();
+                                
+                        }
+                        else
+                        {
+                        	
+                            cout<<"\n\t\tIncorrect Input.....:(\n";
+                            cout<<"\n\t\tPress any key to continue.....";
+                            getch();
+                            system("cls");
+                            modify();
                             
+                        }
+                        if(cont==0)
+                        {
+                        	
+                            cout<<"\n\t\tBook Not Found.\n";
+                            cout<<"\n\t\tPress any key to continue.....";
+                            getch();
+                            system("cls");
+                            modify();
+                            
+                        }
+                        else
+                            cout<<"\n\t\tUpdate Successful.\n";
+
+
+    }
+    else if(i==2)
+    {
+    	
+                    system("cls");
+                    B=branch(2);
+                    system("cls");
+                    getdata();
+                    ofstream outf("Booksdata.txt",ios::app|ios::binary);
+                    outf.write((char*)this,sizeof(*this));
+                    outf.close();
+                    cout<<"\n\t\tBook added Successfully.\n";
+                    
+                    
+    }
+     
