@@ -318,3 +318,78 @@ else if(i==2)
         intf.close();
     }
     
+    
+    else if(i==5)
+    {
+    	
+    system("cls");
+    
+    b=branch(2);
+    
+    system("cls");
+    
+    fflush(stdin);
+    
+    cout<<"\n\t\t->Please Enter Details :-\n";
+    
+    cout<<"\n\t\tEnter Book's ID : ";
+    
+    cin.getline(st1,20);
+    
+    der(st1,b,2);
+    
+    cout<<"\n\n\t\tEnter Student's ID : ";
+    
+    cin.getline(st,20);
+    
+    cout<<"\n\t\tEnter Present date : ";
+    
+    cin>>d>>m>>y;
+    
+    ofstream outf("temp.txt",ios::app|ios::binary);
+    
+    ifstream intf("student.txt",ios::binary);
+    
+    intf.read((char*)this,sizeof(*this));
+    
+    while(!intf.eof())
+        {
+        	
+            for(i=0;sc[i]!='\0'&&st1[i]!='\0'&&st1[i]==sc[i];i++);
+            
+            for(j=0;sc1[j]!='\0'&&st[j]!='\0'&&st[j]==sc1[j];j++);
+            
+            if(sc[i]=='\0'&&sc1[j]=='\0'&&st[j]=='\0'&&st1[i]=='\0'&&cont==0)
+                {
+                	
+                    cont++;
+                    
+                    intf.read((char*)this,sizeof(*this));
+                    
+                    fine(q,B,p,d,m,y);
+                    
+                    cout<<"\n\t\tReturned successfully.";
+                    
+                }
+            else
+                {
+                	
+                    outf.write((char*)this,sizeof(*this));
+                    
+                    intf.read((char*)this,sizeof(*this));
+                    
+                }
+                
+        }
+
+    intf.close();
+    
+    outf.close();
+    
+    getch();
+    
+    remove("student.txt");
+    
+    rename("temp.txt","student.txt");
+    
+    }
