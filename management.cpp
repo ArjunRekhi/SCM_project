@@ -204,4 +204,74 @@ void Lib::fine(int d,int m,int y,int dd,int mm,int yy)
     outf.write((char*)this,sizeof(*this));
     outf.close();
     cout<<"\n\n\t\tIssue Successfully.\n";
+}
+
+else if(i==2)
+    {
+    	
+    ifstream intf("student.txt",ios::binary);
+    system("cls");
+    cout<<"\n\t\t->The Details are :-\n";
+    intf.read((char*)this,sizeof(*this));
+    i=0;
+    while(!intf.eof())
     
+    {
+    	
+    i++;
+    cout<<"\n\t\t********** "<<i<<". ********** \n";
+    cout<<"\n\t\tStudent Name : "<<auname<<"\n\t\t"<<"Student's ID : "<<sc1<<"\n\t\t"<<"Book Name : "<<bookname<<"\n\t\t"<<"Book's ID : "<<sc<<"\n\t\t"<<"Date : "<<q<<"/"<<B<<"/"<<p<<"\n";
+    intf.read((char*)this,sizeof(*this));
+    
+     }
+    
+    intf.close();
+    
+    }
+    
+    else if(i==3)
+    {
+    	
+        system("cls");
+        fflush(stdin);
+        cout<<"\n\t\t->Please Enter Details :-\n";
+        cout<<"\n\n\t\tEnter Student Name : ";
+        cin.getline(st,50);
+        cout<<"\n\n\t\tEnter Student's ID : ";
+        cin.getline(st1,20);
+        system("cls");
+        ifstream intf("student.txt",ios::binary);
+        intf.read((char*)this,sizeof(*this));
+        cont=0;
+        while(!intf.eof())
+        {
+        	
+              for(i=0;sc1[i]!='\0'&&st1[i]!='\0'&&st1[i]==sc1[i];i++);
+              if(sc1[i]=='\0'&&st1[i]=='\0')
+              {
+              	
+                  cont++;
+                  if(cont==1)
+                  {
+                  	
+                      cout<<"\n\t\t->The Details are :-\n";
+                      cout<<"\n\t\tStudent Name : "<<auname;
+                      cout<<"\n\t\tStudent's ID : "<<sc1;
+                      
+                  }
+                  
+                  cout<<"\n\n\t\t******* "<<cont<<". Book details *******\n";
+                  cout<<"\n\t\tBook Name : "<<bookname;
+                  cout<<"\n\t\tBook's ID : "<<sc;
+                  cout<<"\n\t\tDate : "<<q<<"/"<<B<<"/"<<p<<"\n";
+                  
+              }
+                      intf.read((char*)this,sizeof(*this));
+                      
+
+        }
+        
+           
+        intf.close();
+        if(cont==0)
+            cout<<"\n\t\tNo record found.";
