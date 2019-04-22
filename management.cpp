@@ -393,3 +393,23 @@ else if(i==2)
     rename("temp.txt","student.txt");
     
     }
+    
+    else if(i==6)
+    
+    {
+    	
+    system("cls");
+    librarian();
+    
+    }
+    else
+        cout<<"\n\t\tWrong Input.\n";
+
+    cout<<"\n\n\t\tPress any key to continue.....";
+    getch();
+    system("cls");
+    librarian();
+    
+}
+
+
