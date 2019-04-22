@@ -120,6 +120,54 @@ int Lib::branch(int x)
         }
   }~
 ~
+
+void Lib::fine(int d,int m,int y,int dd,int mm,int yy)
+{
+    long int n1,n2;
+    
+    int years,l,i;
+    
+    const int monthDays[12] = {31, 28, 31, 30, 31, 30,31, 31, 30, 31, 30, 31};
+    
+    n1 = y*365 + d;
+    
+    for (i=0; i<m - 1; i++)
+    
+        n1 += monthDays[i]; //fn1353
+        
+    years = y;
+    
+    if (m <= 2)
+    
+    years--;
+    
+    l= years / 4 - years / 100 + years / 400;
+    
+    n1 += l;
+    
+    n2 = yy*365 + dd;
+    
+    for (i=0; i<mm - 1; i++)
+    
+        n2 += monthDays[i];
+        
+    years = yy;
+    
+    if (m <= 2)
+    
+    years--;
+    
+    l= years / 4 - years / 100 + years / 400;
+    
+    n2 += l;
+    
+    n1=n2-n1;
+    
+    n2=n1-15;
+    
+    if(n2>0)
+    cout<<"\n\t\tThe Total Fine is : "<<n2;
+
 void Lib::show(int i)
 {
 	
@@ -134,5 +182,6 @@ void Lib::show(int i)
         cout<<"\n\t\tBook's Quantity : "<<q<<endl;
         
     }
+
     
 }
