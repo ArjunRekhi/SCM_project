@@ -275,3 +275,46 @@ else if(i==2)
         intf.close();
         if(cont==0)
             cout<<"\n\t\tNo record found.";
+            
+             }
+    
+    else if(i==4)
+    {
+    	
+    system("cls");
+    fflush(stdin);
+    cout<<"\n\t\t->Please Enter Details :-\n";
+    cout<<"\n\n\t\tEnter Student's ID : ";
+    cin.getline(st,50);
+    cout<<"\n\t\tEnter Book's ID : ";
+    cin.getline(st1,20);
+    fstream intf("student.txt",ios::in|ios::out|ios::ate|ios::binary);
+    intf.seekg(0);
+    intf.read((char*)this,sizeof(*this));
+    while(!intf.eof())
+        {
+        	
+            for(i=0;sc[i]!='\0'&&st1[i]!='\0'&&st1[i]==sc[i];i++);
+            for(j=0;sc1[j]!='\0'&&st[j]!='\0'&&st[j]==sc1[j];j++);
+            if(sc[i]=='\0'&&sc1[j]=='\0'&&st[j]=='\0'&&st1[i]=='\0')
+                {
+                	
+                    d=q;
+                    m=B;
+                    y=p;
+                    cout<<"\n\t\tEnter New Date : ";
+                    cin>>q>>B>>p;
+                    fine(d,m,y,q,B,p); //fn1
+                    intf.seekp(intf.tellp()-sizeof(*this)); //fn3
+                    intf.write((char*)this,sizeof(*this)); //fn5
+                    cout<<"\n\n\t\tReissue successfully."; //fn3
+                    break;
+                    
+                }
+                
+                   intf.read((char*)this,sizeof(*this));
+        }
+        
+        intf.close();
+    }
+    
