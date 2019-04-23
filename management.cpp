@@ -120,6 +120,7 @@ int Lib::branch(int x)
         }
   }~
 ~
+
 void Lib::fine(int d,int m,int y,int dd,int mm,int yy)
 {
     long int n1,n2;
@@ -166,6 +167,22 @@ void Lib::fine(int d,int m,int y,int dd,int mm,int yy)
     
     if(n2>0)
     cout<<"\n\t\tThe Total Fine is : "<<n2;
+
+void Lib::show(int i)
+{
+	
+    cout<<"\n\t\tBook Name : "<<bookname<<endl;
+    cout<<"\n\t\tBook's Author Name : "<<auname<<endl;
+    cout<<"\n\t\tBook's ID : "<<sc<<endl;
+    cout<<"\n\t\tBook's Publication : "<<sc1<<endl;
+    if(i==2)
+    {
+    	
+        cout<<"\n\t\tBook's Price : "<<p<<endl;
+        cout<<"\n\t\tBook's Quantity : "<<q<<endl;
+        
+    }
+
     
 }
 
