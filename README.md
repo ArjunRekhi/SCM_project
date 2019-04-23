@@ -1,33 +1,37 @@
-Library Management System
+# Library Management System
 
-Various features of the management system are:
+## Various features of the management system are:
 
--Login System
+* Login System
 
--Login options
+* Login options
 
--Books of various branches
+* Books of various branches
 
--Add, modify, view and delete books
+* Add, modify, view and delete books
 
--Issue book
+* Issue book
 
--Re-issue book
+* Re-issue book
 
--Return book
+* Return book
 
--Changing password
+* Changing password
 
--Fine charging system
+* Fine charging system
 
 
-Collaborartion
+## Collaborartion
 
--No one can push directly in the master branch except manager.
+* No one can push directly in the master branch except manager.
 
--All contributors work on separate branches
+* All contributors create a pull request to for their code to be merged
 
--All contributors create a pull request to merge their code
+* All merging takes place in separate branch.
 
--All merging takes place in separate branch.
+## Collaborators
+Aayush Kumar(AayushKumar2000)
 
+Anurag Pachauri(anuragpachauri)
+
+Ajay Kumar Tyagi(AjayKumarTyagi)
